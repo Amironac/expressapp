@@ -1,0 +1,73 @@
+<div class="container col-sm-4 mt-5">
+    <form action="/register"  method="POST">
+        <div class="form-group">
+            {{#each errors}}
+                <p class="lead">{{msg}}</p>
+            {{/each}}
+        </div>
+        <div class="form-group">
+            <h3 class="text-success">
+                Register
+            </h3>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    <small class="text-light">Firstname</small>
+                    <input type="text" name="firstname" class="form-control bg-dark" 
+                    placeholder="Enter firstname">
+                </div>
+                <div class="col-sm-6">
+                    <small class="text-light">Lastname</small>
+                    <input type="text" class="form-control bg-dark " name="lastname"
+                    placeholder="Enter lastname">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <small class="text-light" >Email</small>
+            <input type="email" class="form-control bg-dark" name="email"
+            placeholder="Enter email">
+
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    <small class="text-light">Password</small>
+                    <input type="password" class="form-control bg-dark" name="password"
+                    placeholder="Enter password">
+                </div>
+                <div class="col-sm-6">
+                    <small class="text-light"> Confirm Password</small>
+                    <input type="password" class="form-control bg-dark" name="confirmpassword"
+                    placeholder="Confirm password">
+                </div>
+            </div>
+            
+            <small style="color:rgb(222, 202, 135)">Use at least 8 letter combined with symbols and numbers</small>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    <small class="text-light"> Gender</small>
+                    <input type="text" class="form-control bg-dark " name="gender"
+                    placeholder="Male / Female">
+                </div>
+                <div class="col-sm-6">
+                    <small class="text-light"> Ethnicity </small>
+                    <input type="text" class="form-control bg-dark" name="ethnicity"
+                    placeholder="Spanish, Hispanic ... ">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="form-group ">
+            <button type ="submit"class="btn btn-primary mb-3 btn-block">Register</button>
+            <span class="mt-5"><small class="text-light">If you already have registered </small><a href="/login"
+            style="margin-left:45%">Go to login</a></span>
+        </div>
+        <div class="form-group text-center">
+            2019 &copy; 2020
+        </div>
+    </form>
+</div>

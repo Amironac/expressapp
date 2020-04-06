@@ -1,0 +1,52 @@
+<div class="container col-sm-3" style="margin-top:10%;">
+    <form action="/login"  method="POST">
+        <div class="form-group">
+
+            {{#each errors}}
+                <p class="lead">{{msg}}</p>
+            {{/each}}
+        </div>
+        <div class="form-group">
+           
+            <div class="row ml-auto">
+                <h4 class="text-success">
+                    Login
+                </h4>
+            </div>
+            
+        </div>
+        
+        <div class="form-group">
+            <small class="text-light" >Email</small>
+            <input type="email" class="form-control bg-dark" name="email"
+            placeholder="Enter email">
+
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6">
+                    <small class="text-light">Password</small>
+                    <input type="password" class="form-control bg-dark" name="password"
+                    placeholder="Enter password">
+                </div>
+                <div class="col-sm-6">
+                    <small class="text-light"> Confirm Password</small>
+                    <input type="password" class="form-control bg-dark" name="confirmpassword"
+                    placeholder="Confirm password">
+                </div>
+            </div>
+            
+            <small style="color:rgb(222, 202, 135)">Make sure that passwords match</small>
+        </div>
+        <hr>
+
+        <div class="form-group ">
+            <button type ="submit"class="btn btn-primary mb-3 btn-block">Login</button>
+            <span class="mt-5"><small class="text-light">If you are not registered </small><a href="/register"
+            style="margin-left:33%">Go to register</a></span>
+        </div>
+        <div class="form-group text-center">
+            2019 &copy; 2020
+        </div>
+    </form>
+</div>
